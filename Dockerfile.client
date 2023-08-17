@@ -1,0 +1,9 @@
+FROM centos:7
+
+# Copy the script to the container
+COPY ./script.sh /
+
+RUN chmod +x /script.sh
+
+# Set the entrypoint to the script with CMD arguments
+ENTRYPOINT ["/script.sh"]
